@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1F1B24">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quadratic Solver"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#00FFDD"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:id="@+id/editTextA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="a"
+            android:inputType="numberDecimal|numberSigned"
+            android:backgroundTint="#00FFDD"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#80FFFFFF"/>
+        <EditText
+            android:id="@+id/editTextB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="b"
+            android:inputType="numberDecimal|numberSigned"
+            android:backgroundTint="#00FFDD"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#80FFFFFF"/>
+        <EditText
+            android:id="@+id/editTextC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="c"
+            android:inputType="numberDecimal|numberSigned"
+            android:backgroundTint="#00FFDD"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#80FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/buttonSolve"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Solve"
+            android:backgroundTint="#FF007A"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp"/>
+        <Button
+            android:id="@+id/buttonVoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Voice"
+            android:backgroundTint="#FF007A"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp"/>
+        <Button
+            android:id="@+id/buttonCamera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Camera"
+            android:backgroundTint="#FF007A"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/buttonExport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Export History"
+            android:backgroundTint="#FF007A"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:id="@+id/textViewSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#E0E0E0"/>
+    </ScrollView>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2A2630"/>
+
+</LinearLayout>
