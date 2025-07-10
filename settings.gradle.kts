@@ -16,9 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") } // Critical for MPAndroidChart
     }
 }
 
-rootProject.name = "Quadratic Solver"
+rootProject.name = "QuadraticSolver"
 include(":app")
  
